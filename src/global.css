@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.light{
+   --background:251, 251, 254;
+   --text:5, 8, 4;
+   --border-color:230, 230, 230;
+   --shadow-color:0, 0, 0, 0.2;
+}
+
+.dark{
+   --background:0, 10, 15;
+   --text:234, 233, 252;
+   --border-color:27, 27, 31;
+   --shadow-color:0, 0, 0, 0.2;
+}
