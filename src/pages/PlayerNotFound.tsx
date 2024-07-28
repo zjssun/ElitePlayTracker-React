@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom'
 
-const NotFoundPage = () => {
+const PlayerNotFound = () => {
   return (
     <>
-      <div>404</div>
+      <div>Not Found This Player</div>
       <Link to="/match/All">Go to Homepage</Link>
     </>
   )
 }
 
-export default NotFoundPage
+export default PlayerNotFound
