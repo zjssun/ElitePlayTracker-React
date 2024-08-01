@@ -4,12 +4,54 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   en: {
     translation: {
-      "avgRanks": "Average ELO:"
+      "avgRanks": "Avg ELO:",
+      "training": "Private Scrims",
+      "win": "WIN",
+      "loss": "LOSS",
+      "unknown": "unknown",
+      "TripleKills":"Triple Kills",
+      "QuadroKills":"Quadro Kills",
+      "PentaKills":"Penta Kills",
+      "Assists":"Assists",
+      "January":"Jan.",
+      "February":"Feb.",
+      "March":"Mar.",
+      "April":"Apr.",
+      "May":"May.",
+      "June":"Jun.",
+      "July":"Jul.",
+      "August":"Aug.",
+      "September":"Sep.",
+      "October":"Oct.",
+      "November":"Nov.",
+      "December":"Dec.",
+      "day":" "
     }
   },
   zh: {
     translation: {
-      "avgRanks": "对局均分:"
+      "avgRanks": "对局均分:",
+      "training": "训练赛",
+      "win": "胜利",
+      "loss": "落败",
+      "unknown": "未知",
+      "TripleKills":"三杀",
+      "QuadroKills":"四杀",
+      "PentaKills":"五杀",
+      "Assists":"助攻",
+      "January":"一月",
+      "February":"二月",
+      "March":"三月",
+      "April":"四月",
+      "May":"五月",
+      "June":"六月",
+      "July":"七月",
+      "August":"八月",
+      "September":"九月",
+      "October":"十月",
+      "November":"十一月",
+      "December":"十二月" ,
+      "day":"日"
     }
   }
 };

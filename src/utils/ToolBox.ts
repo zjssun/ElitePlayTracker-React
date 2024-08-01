@@ -6,6 +6,7 @@ import jame from '../assets/img/jame.webp'
 import jl from '../assets/img/jl.webp'
 import m0nesy from '../assets/img/m0nesy.webp'
 import niko from '../assets/img/niko.webp'
+import ropz from '../assets/img/ropz.webp'
 import s1mple from '../assets/img/s1mple.webp'
 import w0nderful from '../assets/img/w0nderful.webp'
 import zywoo from '../assets/img/zywoo.webp'
@@ -32,6 +33,8 @@ export function GetPlayerImg(Player:string){
          return m0nesy;
       case "niko":
          return niko;
+      case "ropz":
+         return ropz;
       case "s1mple":
          return s1mple;
       case "w0nderful":
@@ -50,4 +53,19 @@ export function SplitDate(time:string){
 export function FormatMap(map:string){
    const word = map.split("_")[1];
    return word.charAt(0).toUpperCase() + word.slice(1);
+}
+
+export function RenderName(name:string){
+   if(name.includes("donk")){
+       return "donk";
+   }
+   else if(name.includes("im")){
+      return "iM";
+   }
+   else if(name.includes("jL")){
+      return "jL";
+   }
+   else{
+      return name;
+   }
 }

@@ -5,7 +5,7 @@ import { useEffect,useState } from 'react';
 import {useTranslation} from 'react-i18next'
 
 function App() {
-  const playerList = ['All','donk','EliGE','iM','jks','Jame','jL','m0NESY','niko','s1mple','w0nderful','ZywOo'];
+  const playerList = ['All','donk','EliGE','iM','jks','Jame','jL','m0NESY','niko','ropz','s1mple','w0nderful','ZywOo'];
 
   const [checked, setChecked] = useState(false);
   const [status,setStatus] = useState(false);

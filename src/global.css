@@ -46,14 +46,27 @@
    }
 
    .transitionAll{
-      @apply transition-all duration-500 ease-linear;
+      @apply transition-all duration-300 ease-linear;
    }
 
    .NormalCard{
-      @apply w-[79%] h-64 px-3 py-3
-      bg-card-bg-color border-2 border-card-border-color
-      shadow-[5px_6px_0_rgba(var(--card-border-color))] 
-      rounded-2xl mb-4 transitionAll cursor-crosshair
-      grid grid-cols-3 grid-rows-6;
+      @apply w-[79%] h-64 px-3 py-3 mb-6
+      bg-card-bg-color border-2 border-card-border-color text-text
+      shadow-[5px_6px_0_rgba(var(--card-border-color))] rounded-2xl 
+      grid grid-cols-3 grid-rows-6 gap-2 justify-items-center
+      hover:translate-y-2 hover:shadow-[2px_3px_0_rgba(var(--card-border-color))]
+      transitionAll duration-150 cursor-help;
+   }
+
+   .NormalCard-firstRow{
+      @apply content-center col-span-1 font-bold border-b-2 border-card-border-color;
+   }
+
+   .NormalCard-secondRow{
+      @apply w-full h-full col-span-1 row-span-4 relative;
+   }
+
+   .AbsouleCenter{
+      @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
    }
 }

@@ -35,7 +35,7 @@ const router = createBrowserRouter([
         element:<PlayData />,
         loader: async ({params})=>{
           if(params.player){
-            return await getMatchByName(params.player);
+            return await getMatchByName(params.player.toLowerCase());
           }
         }
       },
