@@ -12,14 +12,14 @@ interface Props {
 const Header = ({isChecked,ChanegeMode,status,Changelg}:Props) => {
   return (
    <>
-      <header className='sticky top-0 z-50 w-full h-20 p-6 
+      <header className='sticky top-0 z-50 w-full h-20 p-6 max-[700px]:p-1
       border-b-[1px] border-border-color bg-background
       shadow-md shadow-shadow-color select-none
       flex justify-center items-center transitionAll'>
          {/* logo */}
          <div className='flex items-center'>
-            <img className='w-28 h-28' src={isChecked? logo_dark : logo_light} alt="" />
-            <span className='flex-none text-2xl text-text'>Elite Play Tracker</span>
+            <img className='w-28 h-28 max-sm:w-24 max-sm:h-24 max-[550px]:w-20 max-[550px]:h-20' src={isChecked? logo_dark : logo_light} alt="" />
+            <span className='flex-none text-2xl text-text max-sm:text-xl max-[550px]:hidden'>Elite Play Tracker</span>
          </div>
          {/* spacer */}
          <div className="grow"></div>
@@ -27,19 +27,20 @@ const Header = ({isChecked,ChanegeMode,status,Changelg}:Props) => {
          <label className="flex-none mr-8 relative items-center cursor-pointer">
             <input type="checkbox" checked={status} onChange={Changelg} className=" hidden peer"/>
                <div className="peer outline-none duration-200 rounded-md shadow-inner
-                after:rounded-md after:duration-500 w-24 h-10 bg-gray-200 peer-focus:outline-none after:content-['中文'] after:absolute after:outline-none after:h-8 after:w-8 
+                after:rounded-md after:duration-500 w-24 max-sm:w-20 h-10 max-sm:h-9 bg-gray-200 peer-focus:outline-none 
+                after:content-['中文'] after:absolute after:outline-none after:h-8 after:w-8 max-sm:after:h-7 max-sm:after:w-7 max-sm:text-xs
                 after:bg-card-bg-color after:top-1 after:left-1 after:flex after:justify-center after:items-center text-sm
-                after:text-text after:font-bold peer-checked:after:translate-x-14 peer-checked:after:content-['EN']">
+                after:text-text after:font-bold peer-checked:after:translate-x-14 max-sm:peer-checked:after:translate-x-10 peer-checked:after:content-['EN']">
             </div>
          </label>
 
          {/* github icon */}
          <a href="https://github.com/zjssun/ElitePlayTracker-React" target="_blank" className="flex-none flex items-center justify-center rounded-full transitionAll shadow-[0_0_5px_0_rgba(var(--dark-hover-color))] hover:shadow-[0_0_15px_1px_rgba(var(--dark-hover-color))] text-text mr-7 ">
-            <i className="fa-brands fa-github text-[2.25rem]"></i>
+            <i className="fa-brands fa-github text-[2.25rem] max-md:text-[2rem]"></i>
          </a>
 
          {/* dark/light mode switch */}
-         <label className="flex-none bg-white w-10 h-10 rounded-full 
+         <label className="flex-none bg-white w-10 h-10 max-md:w-9 max-md:h-9 rounded-full max-[700px]:mr-4
          grid place-content-center cursor-pointer place-items-center
          leading-none shadow-[0_0_5px_0_rgba(var(--dark-hover-color))] hover:shadow-[0_0_15px_1px_rgba(var(--dark-hover-color))]
          transition-all duration-300" htmlFor="switch">

@@ -11,7 +11,7 @@ import s1mple from '../assets/img/s1mple.webp'
 import w0nderful from '../assets/img/w0nderful.webp'
 import zywoo from '../assets/img/zywoo.webp'
 
-//playerList = ['all','donk','EliGE','iM','jks','Jame','jL','m0nesy','niko','s1mple','w0nderful','ZywOo'];
+export const playerList = ['All','donk','EliGE','iM','jks','Jame','jL','m0NESY','niko','ropz','s1mple','w0nderful','ZywOo'];
 
 export function GetPlayerImg(Player:string){
    switch(Player){

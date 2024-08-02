@@ -1,11 +1,12 @@
-import PlayTab from './components/PlayerTab';
+import PlayTab from './pages/PlayerTab';
 import Header from './components/Header';
 
 import { useEffect,useState } from 'react';
 import {useTranslation} from 'react-i18next'
+import {playerList} from './utils/ToolBox'
 
 function App() {
-  const playerList = ['All','donk','EliGE','iM','jks','Jame','jL','m0NESY','niko','ropz','s1mple','w0nderful','ZywOo'];
+  
 
   const [checked, setChecked] = useState(false);
   const [status,setStatus] = useState(false);

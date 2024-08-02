@@ -10,7 +10,7 @@ import { getMatchByName } from './utils/api.ts'
 // load pages
 import App from './App.tsx'
 import NotFoundPage from './pages/NotFoundPage.tsx'
-import PlayData from './pages/PlayData.tsx'
+import MatchPage from './pages/MatchPage.tsx'
 import PlayerNotFound from './pages/PlayerNotFound.tsx'
 
 //i18n
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
     children:[
       {
         path:'/match/:player',
-        element:<PlayData />,
+        element:<MatchPage />,
         loader: async ({params})=>{
           if(params.player){
             return await getMatchByName(params.player.toLowerCase());

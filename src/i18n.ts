@@ -25,7 +25,9 @@ const resources = {
       "October":"Oct.",
       "November":"Nov.",
       "December":"Dec.",
-      "day":" "
+      "day":" ",
+      "NotFound":"Go TO Home Page",
+      "NotFoundPlayer":"Not Found This Player",
     }
   },
   zh: {
@@ -51,7 +53,9 @@ const resources = {
       "October":"十月",
       "November":"十一月",
       "December":"十二月" ,
-      "day":"日"
+      "day":"日",
+      "NotFound":"返回首页",	
+      "NotFoundPlayer":"没找到该玩家",
     }
   }
 };

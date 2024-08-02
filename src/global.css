@@ -37,7 +37,7 @@
 
 @layer components{
    .baseNavLink{
-        @apply min-h-16 min-w-16
+        @apply min-h-16 min-w-16 max-[700px]:min-h-14 max-[700px]:min-w-14 max-[550px]:min-h-12 max-[550px]:min-w-12
         flex flex-row justify-center items-center 
         text-text font-medium hover:bg-navlink-hover-color
         border-[2px] border-navlink-border-color rounded-lg
@@ -50,20 +50,28 @@
    }
 
    .NormalCard{
-      @apply w-[79%] h-64 px-3 py-3 mb-6
+      @apply w-[79%] max-2xl:w-[90%] max-lg:w-[95%]
+       h-64 max-[550px]:h-[25rem] p-3 max-[550px]:p-1  mb-6
       bg-card-bg-color border-2 border-card-border-color text-text
       shadow-[5px_6px_0_rgba(var(--card-border-color))] rounded-2xl 
       grid grid-cols-3 grid-rows-6 gap-2 justify-items-center
+
+      max-[550px]:grid-cols-6 max-[550px]:grid-rows-8 max-[550px]:gap-1
+
       hover:translate-y-2 hover:shadow-[2px_3px_0_rgba(var(--card-border-color))]
       transitionAll duration-150 cursor-help;
    }
 
    .NormalCard-firstRow{
-      @apply content-center col-span-1 font-bold border-b-2 border-card-border-color;
+      @apply content-center col-span-1 font-bold  border-b-2 border-card-border-color max-[550px]:border-b-0;
    }
 
    .NormalCard-secondRow{
       @apply w-full h-full col-span-1 row-span-4 relative;
+   }
+
+   .NormalCard-thirdRow{
+      @apply col-span-3 row-span-1 flex justify-between items-center gap-10 max-[550px]:gap-5 border-t-2 border-card-border-color;
    }
 
    .AbsouleCenter{
