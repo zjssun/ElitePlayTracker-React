@@ -1,7 +1,7 @@
 # Elite Play Tracker
 <div align="center">
   <a href="https://eptracker.pro/#/">
-    <img src="gitimage/ept_logo_dark.png" style="width:280px">
+    <img src="gitimage/ept_logo_dark.png" traget="_blank" style="width:280px">
   </a>
   <div><strong>Elite Play Tracker</strong> 是一个跟踪CS2职业选手(目前都是职业选手)在Faceit平台上每一场对局的部分数据的web项目,对局数据由它的后端<a herf="https://github.com/zjssun/ElitePlay-Tracker-Express">ElitePlay-Tracker-Express</a>提供。</div>
   <div><strong>Elite Play Tracker</strong> is a web project that tracks partial data from every Faceit match played by CS2 pros (currently all pros), provided by its backend, <a herf="https://github.com/zjssun/ElitePlay-Tracker-Express">ElitePlay-Tracker-Express</a>.</div>
