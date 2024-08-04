@@ -2,10 +2,11 @@
 import React from 'react'
 import './global.css'
 import ReactDOM from 'react-dom/client'
-import {createBrowserRouter,RouterProvider,redirect } from 'react-router-dom'
+import {createHashRouter,RouterProvider,redirect,LoaderFunctionArgs } from 'react-router-dom'
 
 // untils
 import { getMatchByName } from './utils/api.ts'
+import {playerList} from './utils/ToolBox.ts'
 
 // load pages
 import App from './App.tsx'
@@ -19,7 +20,7 @@ import './i18n.ts';
 
 
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path:'/',
     element:<App />,
@@ -33,9 +34,12 @@ const router = createBrowserRouter([
       {
         path:'/match/:player',
         element:<MatchPage />,
-        loader: async ({params})=>{
-          if(params.player){
-            return await getMatchByName(params.player.toLowerCase());
+        loader: async ({params}:LoaderFunctionArgs)=>{
+          const player = params.player as string;
+          if(playerList.includes(player)){
+            return await getMatchByName(player.toLowerCase());
+          }else{
+            return redirect("/match/player404");
           }
         }
       },

@@ -2,11 +2,15 @@ import PlayTab from './pages/PlayerTab';
 import Header from './components/Header';
 
 import { useEffect,useState } from 'react';
-import {useTranslation} from 'react-i18next'
-import {playerList} from './utils/ToolBox'
+import { useLocation,Navigate } from 'react-router-dom';
+import {useTranslation} from 'react-i18next';
+import {playerList} from './utils/ToolBox';
 
 function App() {
-  
+  const location = useLocation();
+  if(location.pathname === '/match/'){
+    return <Navigate to="/match/All" />;
+  }  
 
   const [checked, setChecked] = useState(false);
   const [status,setStatus] = useState(false);
