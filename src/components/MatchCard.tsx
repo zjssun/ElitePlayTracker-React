@@ -39,7 +39,7 @@ const MatchCard = ({match}:Props) => {
             </div>
             {/* Rating */}
             <div className="NormalCard-secondRow max-[550px]:col-span-3 max-[550px]:row-span-2">
-               {match.rating === "undefined" ? <p className='AbsouleCenter top-[45%] text-4xl font-bold text-[#4a4a4a]'>{t("unknown")}</p> : 
+               {match.rating === "undefined" ? <p className='AbsouleCenter top-[45%] text-4xl font-bold max-[550px]:text-3xl text-[#4a4a4a]'>{t("unknown")}</p> : 
                   <p className={parseFloat(match.rating) >= 1 ? "AbsouleCenter top-[45%] text-5xl max-[550px]:text-3xl font-bold text-[#0000ff]":"AbsouleCenter top-[45%] text-5xl max-[550px]:text-3xl font-bold text-[#9d1f41]"}>
                         {match.rating}
                   </p>
@@ -55,11 +55,11 @@ const MatchCard = ({match}:Props) => {
                <p className='AbsouleCenter top-[70%] text-xs max-[550px]:text-[0.7rem] font-bold'>K-D</p>
             </div>
             {/* 3rd Row */}
-            <div className="NormalCard-thirdRow max-[550px]:col-span-6 max-[550px]:row-span-2">
-               {match.tripleKill === "undefined" ? <p><span className='mr-1'>{t("TripleKills")}: </span>{t("unknown")}</p> : <p><span className='mr-1'>{t("TripleKills")}:</span>{match.tripleKill}</p>}
-               {match.quadroKill === "undefined" ? <p><span className='mr-1'>{t("QuadroKills")}: </span>{t("unknown")}</p> : <p><span className='mr-1'>{t("QuadroKills")}:</span>{match.quadroKill}</p>}
-               {match.pentaKill === "undefined" ? <p><span className='mr-1'>{t("PentaKills")}: </span>{t("unknown")}</p> : <p><span className='mr-1'>{t("PentaKills")}:</span>{match.pentaKill}</p>}
-               {match.totalAssistsL === "undefined" ? <p><span className='mr-1'>{t("Assists")}: </span>{t("unknown")}</p> : <p><span className='mr-1'>{t("Assists")}:</span>{match.totalAssistsL}</p>}
+            <div className="NormalCard-thirdRow max-[550px]:col-span-6 max-[550px]:row-span-2 max-[550px]:text-sm">
+               {match.tripleKill === "undefined" ? <p><span>{t("TripleKills")}: </span>{t("unknown")}</p>:<p><span>{t("TripleKills")}:</span>{match.tripleKill}</p>}
+               {match.quadroKill === "undefined" ? <p><span>{t("QuadroKills")}: </span>{t("unknown")}</p>:<p><span>{t("QuadroKills")}:</span>{match.quadroKill}</p>}
+               {match.pentaKill === "undefined" ? <p><span>{t("PentaKills")}: </span>{t("unknown")}</p>:<p><span>{t("PentaKills")}:</span>{match.pentaKill}</p>}
+               {match.totalAssistsL === "undefined" ? <p><span>{t("Assists")}: </span>{t("unknown")}</p>:<p><span>{t("Assists")}:</span>{match.totalAssistsL}</p>}
             </div>
          </div>
       </>

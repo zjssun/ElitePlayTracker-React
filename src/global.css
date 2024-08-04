@@ -51,7 +51,7 @@
 
    .NormalCard{
       @apply w-[79%] max-2xl:w-[90%] max-lg:w-[95%]
-       h-64 max-[550px]:h-[25rem] p-3 max-[550px]:p-1  mb-6
+       h-64 max-[550px]:h-[25rem] p-3 max-[550px]:py-1 mb-6
       bg-card-bg-color border-2 border-card-border-color text-text
       shadow-[5px_6px_0_rgba(var(--card-border-color))] rounded-2xl 
       grid grid-cols-3 grid-rows-6 gap-2 justify-items-center
@@ -71,7 +71,7 @@
    }
 
    .NormalCard-thirdRow{
-      @apply col-span-3 row-span-1 flex justify-between items-center gap-10 max-[550px]:gap-5 border-t-2 border-card-border-color;
+      @apply col-span-3 row-span-1 flex justify-between items-center max-[550px]:px-2 gap-10 max-[550px]:gap-2 border-t-2 border-card-border-color;
    }
 
    .AbsouleCenter{

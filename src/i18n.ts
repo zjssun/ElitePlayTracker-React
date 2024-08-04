@@ -8,7 +8,7 @@ const resources = {
       "training": "Private Scrims",
       "win": "WIN",
       "loss": "LOSS",
-      "unknown": "unknown",
+      "unknown": "X",
       "TripleKills":"Triple Kills",
       "QuadroKills":"Quadro Kills",
       "PentaKills":"Penta Kills",
