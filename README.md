@@ -20,7 +20,7 @@ npm install
 ```
 3. 修改/src/utils/[api.ts](https://github.com/zjssun/ElitePlayTracker-React/blob/master/src/utils/api.ts)文件 Modify the api.ts file
 ```js
-axios.defaults.baseURL = 'http://localhost:3000';//修改为你的后端地址
+axios.defaults.baseURL = 'http://localhost:3000';//修改为你的后端地址 change to your backend address
 ```
 
 4. 启动项目 Start Project
