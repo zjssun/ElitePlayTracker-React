@@ -22,7 +22,7 @@ const MatchCard = ({match}:Props) => {
             </div>
             {/*AVG ELO */}
             <div className="NormalCard-firstRow text-lg max-[550px]:text-sm max-[550px]:col-span-4 max-[550px]:row-span-1">
-               {match.effectiveRanking !== "undefined" ? <p><span className='mr-1'>{t("avgRanks")}</span><span className='mr-[1.5px]'>{match.effectiveRanking}</span><span className='text-xs'>ELO</span></p> 
+               {match.effectiveRanking !== "0" ? <p><span className='mr-1'>{t("avgRanks")}</span><span className='mr-[1.5px]'>{match.effectiveRanking}</span><span className='text-xs'>ELO</span></p> 
                : <p>{t("training")}</p>}
             </div>
             {/* Time */}
@@ -31,7 +31,7 @@ const MatchCard = ({match}:Props) => {
             </div>
             {/* 2nd Row */}
             <div className="NormalCard-secondRow max-[550px]:col-span-6 max-[550px]:row-span-3">
-               <img className='w-100% h-full AbsouleCenter blur-[1px] shadow-[2.5px_2.5px_0px_0_rgba(var(--card-border-color))] brightness-[0.65] rounded-sm' src={GetMapImg(match.matchMap,match.mapimage)} alt="" />
+               <img className='w-100% h-full AbsouleCenter blur-[1px] shadow-[2.5px_2.5px_0px_0_rgba(var(--card-border-color))] brightness-[0.65] rounded-sm' src={GetMapImg(match.matchMap)} alt="" />
                <span className={match.matchResult === "win" ? "AbsouleCenter top-[35%] text-[#32d35a] font-bold text-2xl" : "AbsouleCenter top-[35%] text-[#fff9] font-bold text-2xl"}>
                   {t(`${match.matchResult}`)}
                </span>
@@ -39,33 +39,28 @@ const MatchCard = ({match}:Props) => {
             </div>
             {/* Rating */}
             <div className="NormalCard-secondRow max-[550px]:col-span-3 max-[550px]:row-span-2">
-               {match.rating === "undefined" ? <p className='AbsouleCenter top-[45%] text-4xl font-bold max-[550px]:text-3xl text-[#4a4a4a]'>{t("unknown")}</p> : 
-                  <p className={parseFloat(match.rating) >= 1 ? "AbsouleCenter top-[45%] text-5xl max-[550px]:text-3xl font-bold text-[#0000ff]":"AbsouleCenter top-[45%] text-5xl max-[550px]:text-3xl font-bold text-[#9d1f41]"}>
+               <p className={parseFloat(match.rating) >= 1 ? "AbsouleCenter top-[45%] text-5xl max-[550px]:text-3xl font-bold text-[#0000ff]":"AbsouleCenter top-[45%] text-5xl max-[550px]:text-3xl font-bold text-[#9d1f41]"}>
                         {match.rating}
-                  </p>
-               }
+               </p>
                <p className='AbsouleCenter top-[70%] text-xs max-[550px]:text-[0.7rem] font-bold'>K/D Ratio</p>
             </div>
             {/* K-D */}
             <div className="NormalCard-secondRow max-[550px]:col-span-3 max-[550px]:row-span-2">
-               {match.totalKills==="undefined" ? <p className='AbsouleCenter top-[25%] text-xl max-[550px]:text-[0.9rem] font-bold text-[#4a4a4a]'>{t("unknown")}</p> : 
-                  <p className='AbsouleCenter top-[25%] text-3xl max-[550px]:text-xl font-bold'>{match.totalKills}-{match.totalDeaths}</p>
-               }
+               <p className='AbsouleCenter top-[25%] text-3xl max-[550px]:text-xl font-bold'>{match.totalKills}-{match.totalDeaths}</p>
                <p className='AbsouleCenter top-[40%] text-xs max-[550px]:text-[0.7rem] font-bold'>K-D</p>
                {/* ADR */}
                {
-                  match.totalKills==="unstats" ? <p className='adr text-[#4a4a4a] text-xl max-[550px]:text-[0.9rem]'>{t("NotStatistics")}</p> : 
-                  match.adr === "undefined" ?  <p className='adr text-[#4a4a4a] text-xl max-[550px]:text-[0.9rem]'>{t("unknown")}</p> : 
+                  match.totalKills==="unstats" ? <p className='adr text-[#4a4a4a] text-xl max-[550px]:text-[0.9rem]'>{t("NotStatistics")}</p> :  
                   <p className='adr'>{match.adr}</p>
                }
                <p className='AbsouleCenter top-[78%] max-[550px]:top-[82%] text-xs max-[550px]:text-[0.7rem] font-bold'>ADR</p>
             </div>
             {/* 3rd Row */}
             <div className="NormalCard-thirdRow max-[550px]:col-span-6 max-[550px]:row-span-2 max-[550px]:text-sm">
-               {match.tripleKill === "undefined" ? <p><span>{t("TripleKills")}: </span>{t("unknown")}</p>:<p><span>{t("TripleKills")}:</span>{match.tripleKill}</p>}
-               {match.quadroKill === "undefined" ? <p><span>{t("QuadroKills")}: </span>{t("unknown")}</p>:<p><span>{t("QuadroKills")}:</span>{match.quadroKill}</p>}
-               {match.pentaKill === "undefined" ? <p><span>{t("PentaKills")}: </span>{t("unknown")}</p>:<p><span>{t("PentaKills")}:</span>{match.pentaKill}</p>}
-               {match.totalAssistsL === "undefined" ? <p><span>{t("Assists")}: </span>{t("unknown")}</p>:<p><span>{t("Assists")}:</span>{match.totalAssistsL}</p>}
+               <p><span>{t("TripleKills")}:</span>{match.tripleKill}</p>
+               <p><span>{t("QuadroKills")}:</span>{match.quadroKill}</p>
+               <p><span>{t("PentaKills")}:</span>{match.pentaKill}</p>
+               <p><span>{t("Assists")}:</span>{match.totalAssistsL}</p>
             </div>
          </div>
       </>

@@ -16,6 +16,7 @@ import inferno from '../assets/img/inferno.jpeg'
 import nuke from '../assets/img/nuke.jpeg'
 import vertigo from '../assets/img/Vertigo.jpeg'
 import ancient from '../assets/img/ancient.jpeg'
+import anubis from '../assets/img/Anubis.jpeg'
 
 export const playerList = ['All','donk','EliGE','iM','jks','Jame','jL','m0NESY','niko','ropz','s1mple','w0nderful','ZywOo'];
 
@@ -56,7 +57,7 @@ export function SplitDate(time:string){
    return time.split("-");   
 }
 
-export function GetMapImg(map:string,mapurl:string){
+export function GetMapImg(map:string){
    switch(map){
       case "de_dust2":
          return dust2;
@@ -70,8 +71,11 @@ export function GetMapImg(map:string,mapurl:string){
          return vertigo;
       case "de_ancient":
          return ancient;
+      case "de_anubis":
+         return anubis;
+         return 
       default:
-         return mapurl;
+         return "";
          
    }
 }
