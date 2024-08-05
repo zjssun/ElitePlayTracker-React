@@ -77,4 +77,8 @@
    .AbsouleCenter{
       @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
    }
+
+   .adr{
+      @apply AbsouleCenter top-[62%] max-[550px]:top-[64%] text-3xl max-[550px]:text-lg font-bold border-t-2 border-card-border-color;
+   }
 }

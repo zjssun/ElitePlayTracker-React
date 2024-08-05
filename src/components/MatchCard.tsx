@@ -48,11 +48,16 @@ const MatchCard = ({match}:Props) => {
             </div>
             {/* K-D */}
             <div className="NormalCard-secondRow max-[550px]:col-span-3 max-[550px]:row-span-2">
-               {match.totalKills==="undefined" ? <p className='AbsouleCenter top-[45%] text-4xl max-[550px]:text-3xl font-bold text-[#4a4a4a]'>{t("unknown")}</p> : 
-                  <p className='AbsouleCenter top-[45%] text-5xl max-[550px]:text-3xl font-bold'>{match.totalKills}-{match.totalDeaths}
-                  </p>
+               {match.totalKills==="undefined" ? <p className='AbsouleCenter top-[25%] text-xl max-[550px]:text-[0.9rem] font-bold text-[#4a4a4a]'>{t("unknown")}</p> : 
+                  <p className='AbsouleCenter top-[25%] text-3xl max-[550px]:text-xl font-bold'>{match.totalKills}-{match.totalDeaths}</p>
                }
-               <p className='AbsouleCenter top-[70%] text-xs max-[550px]:text-[0.7rem] font-bold'>K-D</p>
+               <p className='AbsouleCenter top-[40%] text-xs max-[550px]:text-[0.7rem] font-bold'>K-D</p>
+               {
+                  match.totalKills==="unstats" ? <p className='adr text-[#4a4a4a] max-[550px]:text-[0.9rem]'>{t("NotStatistics")}</p> : 
+                  match.adr === "undefined" ?  <p className='adr text-[#4a4a4a] max-[550px]:text-[0.9rem]'>{t("unknown")}</p> : 
+                  <p className='adr'>{match.adr}</p>
+               }
+               <p className='AbsouleCenter top-[78%] max-[550px]:top-[82%] text-xs max-[550px]:text-[0.7rem] font-bold'>ADR</p>
             </div>
             {/* 3rd Row */}
             <div className="NormalCard-thirdRow max-[550px]:col-span-6 max-[550px]:row-span-2 max-[550px]:text-sm">

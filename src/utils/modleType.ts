@@ -26,4 +26,5 @@ export interface Matchinfo{
    pentaKill:string,
    effectiveRanking:string,
    mapimage:string,
+   adr:string,
 }

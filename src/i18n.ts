@@ -28,6 +28,7 @@ const resources = {
       "day":" ",
       "NotFound":"Go TO Home Page",
       "NotFoundPlayer":"Not Found This Player",
+      "NotStatistics":"unstats",
     }
   },
   zh: {
@@ -56,6 +57,7 @@ const resources = {
       "day":"日",
       "NotFound":"返回首页",	
       "NotFoundPlayer":"没找到该玩家",
+      "NotStatistics":"未统计",
     }
   }
 };
