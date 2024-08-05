@@ -52,9 +52,10 @@ const MatchCard = ({match}:Props) => {
                   <p className='AbsouleCenter top-[25%] text-3xl max-[550px]:text-xl font-bold'>{match.totalKills}-{match.totalDeaths}</p>
                }
                <p className='AbsouleCenter top-[40%] text-xs max-[550px]:text-[0.7rem] font-bold'>K-D</p>
+               {/* ADR */}
                {
-                  match.totalKills==="unstats" ? <p className='adr text-[#4a4a4a] max-[550px]:text-[0.9rem]'>{t("NotStatistics")}</p> : 
-                  match.adr === "undefined" ?  <p className='adr text-[#4a4a4a] max-[550px]:text-[0.9rem]'>{t("unknown")}</p> : 
+                  match.totalKills==="unstats" ? <p className='adr text-[#4a4a4a] text-xl max-[550px]:text-[0.9rem]'>{t("NotStatistics")}</p> : 
+                  match.adr === "undefined" ?  <p className='adr text-[#4a4a4a] text-xl max-[550px]:text-[0.9rem]'>{t("unknown")}</p> : 
                   <p className='adr'>{match.adr}</p>
                }
                <p className='AbsouleCenter top-[78%] max-[550px]:top-[82%] text-xs max-[550px]:text-[0.7rem] font-bold'>ADR</p>
