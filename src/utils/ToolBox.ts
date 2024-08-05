@@ -10,6 +10,12 @@ import ropz from '../assets/img/ropz.webp'
 import s1mple from '../assets/img/s1mple.webp'
 import w0nderful from '../assets/img/w0nderful.webp'
 import zywoo from '../assets/img/zywoo.webp'
+import dust2 from '../assets/img/dust2.jpeg'
+import mirage from '../assets/img/Mirage.jpeg'
+import inferno from '../assets/img/inferno.jpeg'
+import nuke from '../assets/img/nuke.jpeg'
+import vertigo from '../assets/img/Vertigo.jpeg'
+import ancient from '../assets/img/ancient.jpeg'
 
 export const playerList = ['All','donk','EliGE','iM','jks','Jame','jL','m0NESY','niko','ropz','s1mple','w0nderful','ZywOo'];
 
@@ -50,9 +56,24 @@ export function SplitDate(time:string){
    return time.split("-");   
 }
 
-export function FormatMap(map:string){
-   const word = map.split("_")[1];
-   return word.charAt(0).toUpperCase() + word.slice(1);
+export function GetMapImg(map:string,mapurl:string){
+   switch(map){
+      case "de_dust2":
+         return dust2;
+      case "de_mirage":
+         return mirage;
+      case "de_inferno":
+         return inferno;
+      case "de_nuke":
+         return nuke;
+      case "de_vertigo":
+         return vertigo;
+      case "de_ancient":
+         return ancient;
+      default:
+         return mapurl;
+         
+   }
 }
 
 export function RenderName(name:string){

@@ -1,6 +1,6 @@
 //utils
 import { Matchinfo } from '../utils/modleType'
-import {RenderName} from '../utils/ToolBox'
+import {RenderName,GetMapImg} from '../utils/ToolBox'
 import {GetTime} from '../utils/GetTime'
 
 //language
@@ -31,7 +31,7 @@ const MatchCard = ({match}:Props) => {
             </div>
             {/* 2nd Row */}
             <div className="NormalCard-secondRow max-[550px]:col-span-6 max-[550px]:row-span-3">
-               <img className='w-100% h-full AbsouleCenter blur-[1px] shadow-[2.5px_2.5px_0px_0_rgba(var(--card-border-color))] brightness-[0.65] rounded-sm' src={match.mapimage} alt="" />
+               <img className='w-100% h-full AbsouleCenter blur-[1px] shadow-[2.5px_2.5px_0px_0_rgba(var(--card-border-color))] brightness-[0.65] rounded-sm' src={GetMapImg(match.matchMap,match.mapimage)} alt="" />
                <span className={match.matchResult === "win" ? "AbsouleCenter top-[35%] text-[#32d35a] font-bold text-2xl" : "AbsouleCenter top-[35%] text-[#fff9] font-bold text-2xl"}>
                   {t(`${match.matchResult}`)}
                </span>
