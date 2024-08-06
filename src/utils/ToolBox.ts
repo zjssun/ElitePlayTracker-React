@@ -10,7 +10,10 @@ import ropz from '../assets/img/ropz.webp'
 import s1mple from '../assets/img/s1mple.webp'
 import w0nderful from '../assets/img/w0nderful.webp'
 import zywoo from '../assets/img/zywoo.webp'
-import  twistzz from '../assets/img/Twistzz.webp'
+import twistzz from '../assets/img/Twistzz.webp'
+import electronic from '../assets/img/electronic.webp'
+
+// Map Images
 import dust2 from '../assets/img/dust2.jpeg'
 import mirage from '../assets/img/Mirage.jpeg'
 import inferno from '../assets/img/inferno.jpeg'
@@ -19,7 +22,7 @@ import vertigo from '../assets/img/Vertigo.jpeg'
 import ancient from '../assets/img/ancient.jpeg'
 import anubis from '../assets/img/Anubis.jpeg'
 
-export const playerList = ['All','donk','EliGE','iM','jks','Jame','jL','m0NESY','niko','ropz','s1mple','Twistzz','w0nderful','ZywOo'];
+export const playerList = ['All','donk','electroNic','EliGE','iM','jks','Jame','jL','m0NESY','niko','ropz','s1mple','Twistzz','w0nderful','ZywOo'];
 
 export function GetPlayerImg(Player:string){
    switch(Player){
@@ -51,6 +54,8 @@ export function GetPlayerImg(Player:string){
          return zywoo;
       case "Twistzz":
          return twistzz;
+      case "electroNic":
+         return electronic;
       default:
          return "";
    }
