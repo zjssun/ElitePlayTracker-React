@@ -28,6 +28,8 @@ const resources = {
       "NotFound":"Go TO Home Page",
       "NotFoundPlayer":"Not Found This Player",
       "NotStatistics":"unstats",
+      "totalResult":" data pieces",
+      "total":"A total of "
     }
   },
   zh: {
@@ -56,6 +58,8 @@ const resources = {
       "NotFound":"返回首页",	
       "NotFoundPlayer":"没找到该玩家",
       "NotStatistics":"未统计",
+      "totalResult":"条数据",
+      "total":"共"
     }
   }
 };

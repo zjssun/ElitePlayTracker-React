@@ -7,7 +7,7 @@ import {GetTime} from '../utils/GetTime'
 import {useTranslation} from 'react-i18next'
 
 interface Props{
-   match: Matchinfo
+   match: Matchinfo;
 }
 
 const MatchCard = ({match}:Props) => {
