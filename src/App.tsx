@@ -5,6 +5,7 @@ import { useEffect,useState } from 'react';
 import { useLocation,Navigate } from 'react-router-dom';
 import {useTranslation} from 'react-i18next';
 import {playerList} from './utils/ToolBox';
+import Footer from './components/Footer';
 
 function App() {
   const location = useLocation();
@@ -71,6 +72,7 @@ function App() {
         
         <PlayTab playerList={playerList} />
 
+        <Footer />
       </div>
     </>
   )
