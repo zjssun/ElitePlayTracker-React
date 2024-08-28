@@ -10,7 +10,7 @@ import MatchDate from '../components/MatchDate'
 import { Datainfo, Matchinfo } from '../utils/modleType'
 
 
-const PlayData = () => {
+const MatchPage = () => {
    const {t} = useTranslation()
 
    const { data } = useLoaderData() as Datainfo;
@@ -21,7 +21,7 @@ const PlayData = () => {
    
    return (
       <>
-         <div className='text-center text-lg font-sans my-1 font-bold max-[700px]:text-sm max-[550px]:my-2'>-{t("total")}{playerMatch.length}{t(("totalResult"))}-</div>      
+         <div className='text-center text-lg text-text font-sans my-1 font-bold max-[700px]:text-sm max-[550px]:my-2'>-{t("total")}{playerMatch.length}{t(("totalResult"))}-</div>      
          <div className='w-full flex flex-col justify-center items-center last:mb-3'>
             {timeList.map((time,index)=>(
             <>
@@ -40,4 +40,4 @@ const PlayData = () => {
    )
 }
 
-export default PlayData
+export default MatchPage
