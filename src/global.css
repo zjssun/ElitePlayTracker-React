@@ -50,15 +50,15 @@
    }
 
    .NormalCard{
-      @apply w-[79%] max-2xl:w-[90%] max-lg:w-[95%]
+      @apply relative w-[79%] max-2xl:w-[90%] max-lg:w-[95%]
        h-64 max-[550px]:h-[25rem] p-3 max-[550px]:py-1 mb-6
       bg-card-bg-color border-2 border-card-border-color text-text
-      shadow-[5px_6px_0_rgba(var(--card-border-color))] rounded-2xl 
+      shadow-[2px_3px_0_rgba(var(--card-border-color))] rounded-2xl 
       grid grid-cols-3 grid-rows-6 gap-2 justify-items-center
 
       max-[550px]:grid-cols-6 max-[550px]:grid-rows-8 max-[550px]:gap-1
 
-      hover:translate-y-2 hover:shadow-[2px_3px_0_rgba(var(--card-border-color))]
+      hover:translate-y-2 hover:shadow-[5px_6px_0_rgba(var(--card-border-color))]
       transitionAll duration-150 cursor-help;
    }
 

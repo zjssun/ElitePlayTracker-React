@@ -4,21 +4,20 @@ import {GetTimeList,GetTimeListFromMatch} from '../utils/GetTime'
 //language
 import {useTranslation} from 'react-i18next'
 
+//components
 import MatchCard from '../components/MatchCard'
 import MatchDate from '../components/MatchDate'
 
 import { Datainfo, Matchinfo } from '../utils/modleType'
-
 
 const MatchPage = () => {
    const {t} = useTranslation()
 
    const { data } = useLoaderData() as Datainfo;
    const { playerMatch } = data;
-
    const timeList = GetTimeList(playerMatch) as string[];
    const timeListFromMatch = GetTimeListFromMatch(playerMatch);   
-   
+
    return (
       <>
          <div className='text-center text-lg text-text font-sans my-1 font-bold max-[700px]:text-sm max-[550px]:my-2'>-{t("total")}{playerMatch.length}{t(("totalResult"))}-</div>      

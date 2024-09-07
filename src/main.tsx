@@ -17,9 +17,6 @@ import PlayerNotFound from './pages/PlayerNotFound.tsx'
 //i18n
 import './i18n.ts';
 
-
-
-
 const router = createHashRouter([
   {
     path:'/',

@@ -6,16 +6,33 @@ import {GetTime} from '../utils/GetTime'
 //language
 import {useTranslation} from 'react-i18next'
 
+//gasp
+import {gsap} from 'gsap'
+import {useGSAP} from '@gsap/react'
+import {ScrollTrigger} from 'gsap/ScrollTrigger'
+import { useRef } from 'react'
+
 interface Props{
    match: Matchinfo;
 }
 
 const MatchCard = ({match}:Props) => {
    const {t} = useTranslation();
-   
+   gsap.registerPlugin(useGSAP, ScrollTrigger);
+   const NormalCard = useRef(null);
+
+   useGSAP(()=>{
+      gsap.fromTo(NormalCard.current, 
+         {y: 100, opacity: 0}, 
+         {y: 0, opacity: 1, duration: 0.45, ease: "power3.inOut", scrollTrigger: { 
+            trigger: NormalCard.current, start: "top 120%", end: "bottom 110%", scrub: 1,
+         }},
+      );
+   },{scope: NormalCard})
+
    return (
       <>
-         <div className="NormalCard" onClick={() =>window.open(match.roomUrl,'_blank')}>
+         <div className="NormalCard" ref={NormalCard} onClick={() =>window.open(match.roomUrl,'_blank')}>
             {/* 1st Row */}
             <div className="NormalCard-firstRow max-[550px]:col-span-2 max-[550px]:row-span-1">
                <p className='text-lg'>{RenderName(match.nickName)}</p>

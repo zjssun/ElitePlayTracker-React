@@ -7,6 +7,9 @@ import {useTranslation} from 'react-i18next';
 import {playerList} from './utils/ToolBox';
 import Footer from './components/Footer';
 
+//gasp
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 function App() {
   const location = useLocation();
   if(location.pathname === '/match/'){
@@ -62,7 +65,8 @@ function App() {
       i18n.changeLanguage('zh');
       setStatus(false);
     }
-  },[])
+    ScrollTrigger.refresh();
+  },[location])
 
   
   return (
