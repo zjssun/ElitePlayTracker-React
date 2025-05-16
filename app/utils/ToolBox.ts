@@ -2,7 +2,6 @@ import donk from '../assets/img/donk.webp'
 import elige from '../assets/img/elige.webp'
 import im from '../assets/img/im.webp'
 import jks from '../assets/img/jks.webp'
-import jame from '../assets/img/jame.webp'
 import jl from '../assets/img/jl.webp'
 import m0nesy from '../assets/img/m0nesy.webp'
 import niko from '../assets/img/niko.webp'
@@ -11,8 +10,6 @@ import s1mple from '../assets/img/s1mple.webp'
 import w0nderful from '../assets/img/w0nderful.webp'
 import zywoo from '../assets/img/zywoo.webp'
 import twistzz from '../assets/img/Twistzz.webp'
-import electronic from '../assets/img/electronic.webp'
-import kscerato from '../assets/img/kscrato.webp'
 
 // Map Images
 import dust2 from '../assets/img/dust2.jpeg'
@@ -23,7 +20,7 @@ import vertigo from '../assets/img/Vertigo.jpeg'
 import ancient from '../assets/img/ancient.jpeg'
 import anubis from '../assets/img/Anubis.jpeg'
 
-export const playerList = ['All','donk','electroNic','EliGE','iM','jks','Jame','jL','KSCERATO','m0NESY','niko','ropz','s1mple','Twistzz','w0nderful','ZywOo'];
+export const playerList = ['donk','EliGE','iM','jL','m0NESY','niko','ropz','s1mple','Twistzz','w0nderful','ZywOo'];
 
 export function GetPlayerImg(Player:string){
    switch(Player){
@@ -37,8 +34,6 @@ export function GetPlayerImg(Player:string){
          return im;
       case "jks":
          return jks;
-      case "Jame":
-         return jame;
       case "jL":
          return jl;
       case "m0NESY":
@@ -55,10 +50,6 @@ export function GetPlayerImg(Player:string){
          return zywoo;
       case "Twistzz":
          return twistzz;
-      case "electroNic":
-         return electronic;
-      case "KSCERATO":
-         return kscerato;
       default:
          return "";
    }
@@ -84,7 +75,6 @@ export function GetMapImg(map:string){
          return ancient;
       case "de_anubis":
          return anubis;
-         return 
       default:
          return "";
          

@@ -1,0 +1,265 @@
+.header{
+   width: 80%;
+   height: 75px;
+   background-color: var(--background);
+   color: var(--text);
+   padding: 10px;
+   text-align: center;
+   display: flex;
+   align-items: center;
+   border-bottom: 2px solid var(--border-color);
+   transition: all 0.3s ease;
+}
+.logo{
+   width: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 5px;
+   img{
+      width: 102px;
+      height: auto;
+   }
+   span{
+      font-size: var(--lager-size);
+   }
+}
+.spacer{
+   flex: 0.9;
+}
+.language{
+   flex: 0.05;
+   margin-top: 10px;
+   border-radius: 15px;
+   input[type=checkbox]{
+      appearance: none;
+      height: 35px;
+      width: 80px;
+      background-color: var(--lang-background-color);
+      position: relative;
+      border-radius: .5em;
+      cursor: pointer;
+      border: 1px solid var(--lang-color-border);
+   }
+   input[type=checkbox]::before {
+      content: 'ZH';
+      display: block;
+      height: 1.9em;
+      width: 1.9em;
+      text-align: center;
+      line-height: 1.9em;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      top: 50%;
+      left: calc(1.9em/2 + .4em);
+      background-color: var(--lang-zh-color);
+      border-radius: .2em;
+      transition: .3s ease;
+      color: var(--lang-zh-font-color);
+   }
+   input[type=checkbox]:checked::before {
+      content: 'EN';
+      background-color: var(--lang-en-color);
+      left: calc(100% - (1.9em/2 + .4em));
+      color: var(--lang-en-font-color);
+   }
+}
+
+.header-github{
+   margin-top: 10px;
+   flex: 0.08;
+   scale: 1;
+   color:var(--icon-color);
+   &:hover{
+      color: var(--icon-hover-color);
+   }
+}
+
+.toggle {
+   margin-top: 5px;
+   margin-right: 10px;
+   background: var(--switch-background-color);
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   display: grid;
+   place-items: center;
+   cursor: pointer;
+   box-shadow: 0 0 35px 5px var(--switch-shadow-color);
+   line-height: 1;
+   input{
+      display: none;
+   }
+   transition: box-shadow 350ms;
+}
+
+.icon {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  transition: transform 300ms,color 300ms;
+  line-height: 0.1;
+  
+}
+
+.icon--sun {
+  transition-delay: 100ms;
+}
+
+.icon--moon {
+  transform: scale(0);
+}
+
+#switch:checked + .icon--sun {
+   transform: rotate(360deg) scale(0);
+}
+
+#switch:checked ~ .icon--moon {
+   transition-delay: 100ms;
+   transform: scale(1) rotate(-360deg);
+}
+@media (max-width: 1440px){
+   .language{
+      flex: 0.15;
+   }
+   .toggle{
+      margin-right: 0px;
+   }
+   .spacer{
+      flex: 1;
+   }
+   .header-github{
+      flex: 0.15;
+   }
+}
+
+@media (max-width: 1024px){
+   .header{
+      width: 90%;
+   }
+   .language{
+      flex: 0.2;
+   }
+   .toggle{
+      margin-right: 0px;
+   }
+   .spacer{
+      flex: 1;
+   }
+   .header-github{
+      flex: 0.2;
+   }
+}
+
+@media (max-width: 768px){
+   .header{
+      width: 100%;
+   }
+   .language{
+      flex: 0.3;
+   }
+   .toggle{
+      margin-right: 0px;
+   }
+   .spacer{
+      flex: 1;
+   }
+   .header-github{
+      flex: 0.3;
+   }
+}
+
+@media (max-width: 600px) {
+   .logo{
+      img{
+         width: 102px;
+         height: auto;
+      }
+      span{
+         font-size: 20px;
+      }
+   }
+   .language{
+      flex: 1;
+      input[type=checkbox]{
+         height: 35px;
+         width: 75px;
+      }
+      input[type=checkbox]::before {
+         font-size: 13px;
+      }
+   }
+
+   .header-github{
+      flex: 1;
+      scale: 0.9;
+   }
+   
+   .toggle{
+      margin-top: 5px;
+      width: 40px;
+      height: 40px;
+   }
+   .icon{
+      scale: 0.9;
+   }
+}
+
+@media (max-width: 430px) {
+   .logo{
+      img{
+         width: 102px;
+         height: auto;
+      }
+      span{
+         font-size: 0px;
+      }
+   }
+   .language{
+      flex: 1;
+      input[type=checkbox]{
+         height: 35px;
+         width: 75px;
+      }
+      input[type=checkbox]::before {
+         font-size: 13px;
+      }
+   }
+
+   .header-github{
+      flex: 1;
+      scale: 0.9;
+   }
+   
+   .toggle{
+      margin-top: 5px;
+      width: 40px;
+      height: 40px;
+   }
+   .icon{
+      scale: 0.9;
+   }
+}
+
+@media (max-width: 320px){
+   .language{
+      flex: 1;
+      input[type=checkbox]{
+         height: 35px;
+         width: 75px;
+      }
+      input[type=checkbox]::before {
+         font-size: 12px;
+      }
+   }
+   .toggle{
+      margin-right: 0px;
+      width: 35px;
+      height: 35px;
+   }
+   .spacer{
+      flex: 0.2;
+   }
+   .header-github{
+      flex: 1;
+   }
+}

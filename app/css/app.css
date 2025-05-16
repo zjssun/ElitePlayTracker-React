@@ -1,0 +1,83 @@
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: 'Poppins', sans-serif;
+   user-select: none;
+}
+:root{
+   --base-size: 16px;
+   --mid-size: 20px;
+   --lager-size: 24px;
+   --x-lager-size:30px;
+   --xx-lager-size: 36px;
+}
+a{
+   text-decoration: none;
+   color: inherit;
+}
+.light{
+   --background:#ffffff;
+   --text:#050804;
+   --border-color:#f7f7f7;
+
+   --icon-color:#818181;
+   --icon-hover-color:#121212;
+
+   --lang-background-color:#f5f5f5d8;
+   --lang-zh-font-color:#f7f7f7;
+   --lang-en-font-color:#f7f7f7;
+   --lang-zh-color:#e81b1bb0;
+   --lang-en-color:#10bce7da;
+   --lang-color-border:#c2c2c4;
+
+   --switch-icon-color:#191919;
+   --switch-background-color:#f5f5f5d8;
+   --switch-shadow-color:#0000001f;
+
+   --secondary-background:#DDDBE6;
+   --navlink-border-color: #191919;
+   --navlink-hover-color: #eeeeee;
+
+   --navlink-img-bg: #F2F2F2;
+   --navlink-select-color:#FF7500;
+   --dark-hover-color:#B5B5B5;
+   --year-color:#EAE9FC;
+   --card-bg-color:#FFFFFF;
+   --card-border-color:#000000;
+}
+
+.dark{
+   --background:#121212;
+   --text:	#f1f2f3;
+   --border-color:#444444;
+
+   --icon-color:#818181;
+   --icon-hover-color:#f7f7f7;
+
+   --lang-background-color:#252525;
+   --lang-zh-font-color:#ff7272;
+   --lang-en-font-color:#8de8fff1;
+   --lang-zh-color:#050804;
+   --lang-en-color:#050804;
+   --lang-color-border:#818181;
+
+   --switch-icon-color:#f7f7f7;
+   --switch-background-color:#202020;
+   --switch-shadow-color:#f8e7d02f;
+
+   --secondary-background:#020024;
+   --navlink-border-color: #EAE9FC;
+   --navlink-hover-color: #eeeeee;
+
+   --navlink-img-bg: #000F19B3;
+   --navlink-select-color:	#FF7500;
+   --dark-hover-color:#FFFFFF;
+   --year-color:#050804;
+   --card-bg-color:#000000;
+   --card-border-color:#DEDEDE;
+}
+
+html,body{
+   background: var(--background);
+}

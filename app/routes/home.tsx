@@ -1,33 +1,34 @@
-import PlayTab from './pages/PlayerTab';
-import Header from './components/Header';
+import type { Route } from "./+types/home";
+import { useState,useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
-import { useEffect,useState } from 'react';
-import { useLocation,Navigate } from 'react-router-dom';
-import {useTranslation} from 'react-i18next';
-import {playerList} from './utils/ToolBox';
-import Footer from './components/Footer';
+import Header from "../components/Header";
+import MatchArea from "../components/MatchArea";
+import "../css/home.css"
 
-//gasp
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
 
-function App() {
-  const location = useLocation();
-  if(location.pathname === '/match/'){
-    return <Navigate to="/match/All" />;
-  }  
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "Elite Player Tracker" },
+    { name: "description", content: "Welcome to React Router!" },
+  ];
+}
 
+export default function Home() {
   const [checked, setChecked] = useState(false);
   const [status,setStatus] = useState(false);
-
   const {i18n} = useTranslation()
 
-  // Dark Mode Function
+   // Dark Mode Function
   const ChanegeMode=()=>{
     setChecked(!checked);
     localStorage.setItem('DarkMode' ,(!checked).toString());
   }
 
-  // Language Function
+   // Language Function
   const Changelg=()=>{
     setStatus(!status); 
     if(!status){
@@ -38,6 +39,7 @@ function App() {
       localStorage.setItem('Language' ,'zh');
     }
   }
+
   useEffect(()=>{
     // Check if Dark Mode is enabled in Local Storage
     const localDarkMode = localStorage.getItem('DarkMode');
@@ -66,20 +68,16 @@ function App() {
       setStatus(false);
     }
     ScrollTrigger.refresh();
-  },[location])
+  },[])
 
-  
-  return (
+  return(
     <>
-    <div className={`${checked? 'dark' : 'light'} font-sans w-full min-h-screen flex flex-col justify-start items-center bg-background transitionAll`}>
-        <Header ChanegeMode={ChanegeMode} isChecked={checked} status={status} Changelg={Changelg} />
-        
-        <PlayTab playerList={playerList} />
-
-        <Footer />
+      <div className={`${checked? 'dark' : 'light'} Home`}>
+          <div className="Body">
+            <Header ChanegeMode={ChanegeMode} isChecked={checked} status={status} Changelg={Changelg} />
+            <MatchArea/>
+          </div>        
       </div>
     </>
   )
 }
-
-export default App
