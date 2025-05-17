@@ -12,4 +12,7 @@ declare module "react-router" {
 
 type Params = {
   "/": {};
+  "/:player": {
+    "player": string;
+  };
 };

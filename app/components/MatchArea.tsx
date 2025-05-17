@@ -6,27 +6,25 @@ import "../css/mtachArea.css"
 
 export default function MatchArea(){
    const {t} = useTranslation();
-   return(
-      <>
-        <div className='matchArea-container'>
-            <hgroup className="matchArea-hgroup">
-                {playerList.map(
-                  (player)=>(
-                    <NavLink className={({ isActive, isPending }) => 
-                      isPending ? "pending baseNavLink"
-                     : isActive ? "active baseNavLink" 
-                     : "baseNavLink"
-                    } 
-                      key={player} 
-                      to={`/match/${player}`}>
-                      {GetPlayerImg(player) ? <img className='avatar-img' src={GetPlayerImg(player)}/> : ""}
-                      <span>{t(`${player}`)}</span>
-                    </NavLink>
-                  ))
-                }
-            </hgroup>
-            <Outlet/>
-        </div>
-      </>
+   return( 
+      <div className='matchArea-container'>
+          <hgroup className="matchArea-hgroup">
+              {playerList.map(
+                (player)=>(
+                  <NavLink className={({ isActive, isPending }) => 
+                    isPending ? "baseNavLink"
+                    : isActive ? "baseNavLink-active baseNavLink" 
+                    : "baseNavLink"
+                  } 
+                    key={player}
+                    to={`/${player}`}>
+                    {GetPlayerImg(player) ? <img className='avatar-img' src={GetPlayerImg(player)}/> : ""}
+                    <span>{t(`${player}`)}</span>
+                  </NavLink>
+                ))
+              }
+          </hgroup>
+          <Outlet/>
+      </div>
    )
 }

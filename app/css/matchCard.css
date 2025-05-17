@@ -1,0 +1,304 @@
+.matchCardContainer{
+   position: relative;
+   width: 50%;
+   height: 256px;              
+   padding: 12px;           
+   margin-bottom: 24px;          
+   background-color: var(--card-bg-color);
+   color: var(--text);
+   border: 2px solid var(--card-border-color);
+   box-shadow: 5px 6px 0 var(--card-border-color);
+   border-radius: 16px;          
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(6, 1fr);
+   gap: 8px;                      
+   justify-items: center;
+   transition: all 150ms ease;
+   cursor: help;
+}
+
+.matchCardContainer:hover{
+   transform: translateY(5px);
+   box-shadow: 2px 3px 0 var(--card-border-color);
+}
+
+.matchCard-firstRow{
+   place-content: center;
+   grid-column: span 1 / span 1;
+   font-weight: bold;
+   border-bottom: 2px solid var(--card-border-color);
+   p{
+      font-size: var(--base-size);
+   }
+}
+
+.avgelo{
+   font-size: var(--mid-size);
+}
+
+.matchCard-time{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.matchCard-time{
+   .clock{
+      margin-right: 4px;
+      scale: 0.8;
+   }
+}
+
+.matchCard-secondRow{
+   width: 100%;
+   height: 100%;
+   grid-column: span 1 / span 1;
+   grid-row: span 4 / span 4;
+   position: relative;
+}
+.matchCard-map{
+   width: 100%;                        
+   height: 100%;                       
+   position: absolute;               
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%); 
+   filter: blur(1px) brightness(0.65);
+   box-shadow: 2.5px 2.5px 0px 0 var(--card-border-color); 
+   border-radius: 2px;
+}
+
+.matchResult-win{
+   position: absolute;
+   top: 35%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   color: #32d35a;;
+   font-weight: bold;
+  font-size: var(--lager-size);
+}
+
+.matchResult-loss{
+   position: absolute;
+   top: 35%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   color: #fa1818c7;
+   font-weight: bold;
+   font-size: var(--lager-size);
+}
+
+.matchCard-score{
+   position: absolute;
+   top: 65%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   color: white;
+   font-weight: bold;
+   font-size: var(--lager-size);
+   border-top: 4px solid #f97316;
+   padding: 4px;
+}
+
+.above1{
+   position: absolute;
+   left: 50%;
+   top: 45%;
+   transform: translate(-50%, -50%);
+   font-size: 48px;
+   font-weight: bold;
+   color: #4b4bffd0;
+}
+.below1{
+   position: absolute;
+   left: 50%;
+   top: 45%;
+   transform: translateX(-50%) translateY(-50%);
+   font-size: 48px;
+   font-weight: 700;
+   color: #9d1f41;
+}
+
+.matchCard-kd-des{
+   position: absolute;
+   top: 70%;
+   left: 50%;
+   transform: translateX(-50%) translateY(-50%);
+   font-size: var(--small-size);  
+   line-height: 16px; 
+   font-weight: 700;
+}
+
+.total-kd{
+   position: absolute;
+   top: 30%;
+   left: 50%;
+   transform: translateX(-50%) translateY(-50%);
+   font-size: var(--xx-lager-size);
+   font-weight: 700;
+}
+
+.total-kd-des{
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translateX(-50%) translateY(-50%);
+   font-size: var(--base-size);  
+   line-height: 16px;
+   font-weight: 700;
+}
+
+.matchCard-stats{
+   position: absolute;
+   left: 50%;
+   top: 75%;
+   transform: translateX(-50%) translateY(-50%);
+   font-weight: 700; 
+   border: 2px solid var(--card-border-color);
+   color: #4a4a4a;
+   font-size: var(--lager-size);
+}
+
+.adr{
+   position: absolute;
+   left: 50%;
+   top: 75%;
+   transform: translateX(-50%) translateY(-50%);
+   font-size: var(--x-lager-size);
+   font-weight: 700;
+   border-top: 2px solid var(--card-border-color);
+}
+
+.adr-des{
+   position: absolute;
+   left: 50%;
+   top: 92%;
+   transform: translateX(-50%) translateY(-50%);
+   font-size: var(--tiny-size);   
+   line-height: 16px;
+   font-weight: 700;
+}
+
+.matchCard-thirdRow{
+   grid-column: span 3;
+   grid-row: span 1;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 40px;
+   border-top-width: 2px;
+   border-top-style: solid;
+   border-top-color: var(--card-border-color);
+}
+
+@media (max-width:1440px){
+   .matchCardContainer{
+      width: 65%;
+   }
+}
+
+@media (max-width:1200px){
+   .matchCardContainer {
+      width: 85%;
+   }
+}
+
+@media (max-width:768px){
+   .matchCardContainer {
+      width: 95%;
+   }
+}
+
+/* 屏幕宽度 ≤ 670px */
+@media (max-width: 670px) {
+  .matchCardContainer {
+      width: 90%;
+      height: 380px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(8, 1fr);
+      gap: 4px;
+  }
+  .matchCard-firstRow:first-child{
+      display: none;
+  }
+  .matchCard-firstRow:nth-child(2){
+      border-bottom: 2px solid var(--card-border-color);
+  }
+  .matchCard-firstRow{
+      border-bottom: 0px;
+  }
+  .avgelo{
+      font-size: var(--small-size);               
+      grid-column: span 6 / span 6; 
+      grid-row: span 1 / span 1;
+  }
+  .matchCard-time{
+      grid-column: span 6 / span 6;
+      grid-row: span 1 / span 1;    
+      font-size: var(--small-size); 
+  }
+  .matchCard-secondRow{
+      grid-column: span 6 / span 6;
+      grid-row: span 3 / span 3;
+  }
+  .matchCard-map{
+      width: auto;
+  }
+  .matchCard-score{
+      top:70%;
+  }
+  .matchCard-rating{
+      grid-column: span 3 / span 3;
+      grid-row: span 2 / span 2;
+  }
+  .above1,.below1{
+      font-size: var(--lager-size);
+  }
+  .matchCard-kd-des{
+      font-size: 10px;
+  }
+  .matchCard-kd{
+      grid-column: span 3;
+      grid-row: span 2;
+   }
+   .total-kd{
+      top:25%;
+      font-size: var(--base-size);
+      line-height: 28px;
+   }
+   .total-kd-des{
+      top:45%;
+      font-size: 10px;
+      border-bottom: 2px solid var(--card-border-color);
+   }
+   .matchCard-stats{
+      top: 65%;
+      font-size: 18px;
+      border:0px;
+   }
+   .adr{
+      top: 65%;
+      font-size: 18px;
+      border: 0px;
+   }
+   .adr-des{
+      top: 85%;
+      font-size: 11.2px;
+   }
+   .matchCard-thirdRow{
+      grid-column: span 6;
+      grid-row: span 1;
+      padding-left: 8px;
+      padding-right: 8px;
+      gap: 8px;
+   }
+}
+
+@media (max-width: 314px) {
+   .matchCard-map{
+      width: 100%;
+  }
+}

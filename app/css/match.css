@@ -1,0 +1,17 @@
+.static{
+   text-align: center;        
+   font-size: var(--base-size);          
+   color: rgb(var(--text));
+   font-family: sans-serif;
+   margin-top: 4px;
+   font-weight:bold;
+}
+
+.match-container{
+   width: 100%;
+   height: auto;          
+   display: flex;             
+   flex-direction: column;   
+   justify-content: center; 
+   align-items: center;
+}

@@ -1,5 +1,6 @@
 import type { Route } from "./+types/home";
-import { useState,useEffect } from "react";
+import { useState,useEffect,useRef } from "react";
+import {useLocation,useNavigate} from "react-router"
 import { useTranslation } from "react-i18next";
 
 import Header from "../components/Header";
@@ -20,8 +21,13 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   const [checked, setChecked] = useState(false);
   const [status,setStatus] = useState(false);
-  const {i18n} = useTranslation()
+  const {i18n} = useTranslation();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const wrapperRef = useRef(null);
+  const contentRef = useRef(null);
 
+  gsap.registerPlugin(ScrollTrigger,ScrollSmoother);
    // Dark Mode Function
   const ChanegeMode=()=>{
     setChecked(!checked);
@@ -41,6 +47,10 @@ export default function Home() {
   }
 
   useEffect(()=>{
+    // Check Route is /
+    if (location.pathname === '/') {
+      navigate('/donk');
+    }
     // Check if Dark Mode is enabled in Local Storage
     const localDarkMode = localStorage.getItem('DarkMode');
     if(localDarkMode){
@@ -67,17 +77,28 @@ export default function Home() {
       i18n.changeLanguage('zh');
       setStatus(false);
     }
-    ScrollTrigger.refresh();
-  },[])
+    // Scroll Function
+    const smoother = ScrollSmoother.create({
+      wrapper: wrapperRef.current,
+      content: contentRef.current,
+      smooth: 1,
+      smoothTouch:1,
+      speed:3.5,
+      effects: true,
+      ignoreMobileResize:true,
+      normalizeScroll: true
+    });
+    return () => {
+      smoother.kill(); // 清理防止内存泄漏
+    };
+  },[location, navigate])
 
   return(
-    <>
-      <div className={`${checked? 'dark' : 'light'} Home`}>
-          <div className="Body">
-            <Header ChanegeMode={ChanegeMode} isChecked={checked} status={status} Changelg={Changelg} />
-            <MatchArea/>
-          </div>        
-      </div>
-    </>
+    <div className={`${checked? 'dark' : 'light'} Home`} ref={wrapperRef}>
+        <div className="Body" ref={contentRef}>
+          <Header ChanegeMode={ChanegeMode} isChecked={checked} status={status} Changelg={Changelg} />
+          <MatchArea/>
+        </div>
+    </div>
   )
 }

@@ -1,0 +1,54 @@
+.matchDateContainer{
+   width: 65%;                
+   height: auto;               
+   margin-bottom: 8px;         
+   display: flex;               
+   justify-content: flex-start; 
+   align-items: center;
+}
+.matchDateText{
+   color: var(--text);
+   span{
+      font-size: var(--xx-lager-size);
+      margin-right: 4px;
+      line-height: 36px;
+   }
+   span:last-child{
+      font-size: var(--tiny-size);
+      opacity: 0;
+      border: 2px solid var(--text);
+      border-radius: 5px;
+      padding: 1px;
+      transition: all 0.3s ease;
+   }
+   &:hover span:last-child{
+      opacity: 1;
+   }
+}
+
+@media (max-width:1440px){
+   .matchDateContainer{
+      width: 70%;
+   }
+}
+@media (max-width:1200px){
+   .matchDateContainer{
+      width: 90%;
+   }
+}
+
+@media (max-width:768px){
+   .matchDateContainer{
+      width: 97%;
+      span{
+         font-size: 28px;
+      }
+   }
+}
+@media (max-width:500px){
+   .matchDateContainer{
+      span{
+         font-size: var(--lager-size);
+      }
+   }
+}

@@ -1,7 +1,6 @@
 import donk from '../assets/img/donk.webp'
 import elige from '../assets/img/elige.webp'
 import im from '../assets/img/im.webp'
-import jks from '../assets/img/jks.webp'
 import jl from '../assets/img/jl.webp'
 import m0nesy from '../assets/img/m0nesy.webp'
 import niko from '../assets/img/niko.webp'
@@ -10,6 +9,7 @@ import s1mple from '../assets/img/s1mple.webp'
 import w0nderful from '../assets/img/w0nderful.webp'
 import zywoo from '../assets/img/zywoo.webp'
 import twistzz from '../assets/img/Twistzz.webp'
+import kyousuke from '../assets/img/kyousuke.webp'
 
 // Map Images
 import dust2 from '../assets/img/dust2.jpeg'
@@ -19,8 +19,9 @@ import nuke from '../assets/img/nuke.jpeg'
 import vertigo from '../assets/img/Vertigo.jpeg'
 import ancient from '../assets/img/ancient.jpeg'
 import anubis from '../assets/img/Anubis.jpeg'
+import train from '../assets/img/train.png'
 
-export const playerList = ['donk','EliGE','iM','jL','m0NESY','niko','ropz','s1mple','Twistzz','w0nderful','ZywOo'];
+export const playerList = ['donk','EliGE','iM','jL','kyousuke','m0NESY','niko','ropz','s1mple','Twistzz','w0nderful','ZywOo'];
 
 export function GetPlayerImg(Player:string){
    switch(Player){
@@ -32,10 +33,10 @@ export function GetPlayerImg(Player:string){
          return elige;
       case "iM":
          return im;
-      case "jks":
-         return jks;
       case "jL":
          return jl;
+      case "kyousuke":
+         return kyousuke;
       case "m0NESY":
          return m0nesy;
       case "niko":
@@ -75,9 +76,10 @@ export function GetMapImg(map:string){
          return ancient;
       case "de_anubis":
          return anubis;
+      case "de_train":
+         return train;
       default:
          return "";
-         
    }
 }
 
@@ -90,6 +92,9 @@ export function RenderName(name:string){
    }
    else if(name.includes("jL")){
       return "jL";
+   }
+   else if(name.includes("CEMEN_BAKIN")){
+      return "kyousuke";
    }
    else{
       return name;

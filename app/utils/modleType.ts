@@ -19,7 +19,7 @@ export interface Matchinfo{
    timestamp:string,
    totalKills:string,
    totalDeaths:string,
-   totalAssistsL:string,
+   totalAssistsl:string,
    rating:string,
    tripleKill:string,
    quadroKill:string,

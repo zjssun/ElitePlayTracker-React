@@ -31,6 +31,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="CS2 Elite Play Tracker Faceit Match Tracker easy to find best demo donk Twistzz Niko kyousuke EliGE ZywOo ropz m0NESY w0nderful jL iM s1mple"/>
+        <meta property="og:url" content="https://eptracker.pro/donk"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Elite Play Tracker"/>
+        <meta property="og:description" content="CS2 Elite Play Tracker Faceit Match Tracker easy to find best demo donk Twistzz Niko kyousuke EliGE ZywOo ropz m0NESY w0nderful jL iM s1mple"/>
+        {/* <meta property="og:image" content=""></meta> */}
         <Meta />
         <Links />
       </head>

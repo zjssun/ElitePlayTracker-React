@@ -6,7 +6,7 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  background: salmon;
+  background: none;
 }
 
 .matchArea-hgroup {
@@ -16,8 +16,8 @@
    flex-wrap: wrap;
    justify-content: center;
    align-items: center;
-   margin-bottom: 50px;
-   background-color: bisque;
+   margin-bottom: 25px;
+   background-color: none;
 }
 
 .baseNavLink {
@@ -36,12 +36,18 @@
    border-width: 2px;
    border-style: solid;
    border-color: var(--navlink-border-color);
-   border-radius: 8px;         
+   border-radius: 8px;
+   box-shadow: 0 2px 0px 0px var(--navlink-border-color);
    transition: all 0.3s ease;
 }
 
 .baseNavLink:hover {
   background-color: var(--navlink-hover-color);
+}
+.baseNavLink-active {
+  background-color: var(--navlink-hover-color);
+  box-shadow: 0 0px 0px 0px var(--navlink-border-color);
+   transform: translateY(2px);
 }
 .avatar-img {
   margin-right: 8px;       
@@ -54,7 +60,7 @@
 @media (max-width: 1024px){
    .matchArea-hgroup{
       padding: 0 2% 0 ;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
    }
    .baseNavLink{
       min-height: 54px;        
@@ -69,8 +75,8 @@
 
 @media (max-width: 768px){
    .matchArea-hgroup{
-      padding: 0 2% 0 ;
-      margin-bottom: 40px;
+      padding: 0 1% 0 ;
+      margin-bottom: 10px;
    }
    .baseNavLink{
       min-height: 48px;        
@@ -84,8 +90,8 @@
 }
 @media (max-width: 430px){
    .matchArea-hgroup{
-      padding: 0 2% 0 ;
-      margin-bottom: 40px;
+      padding: 0 1px 0 ;
+      margin-bottom: 10px;
    }
    .baseNavLink{
       min-height: 32px;        

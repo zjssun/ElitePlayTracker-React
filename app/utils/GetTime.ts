@@ -1,6 +1,6 @@
 import moment from 'moment'
 
-import { Matchinfo } from '../utils/modleType'
+import type { Matchinfo } from '../utils/modleType'
 
 export function GetTime(date:string,format:string):string{
    const time = new Date(parseInt(date))
