@@ -10,6 +10,7 @@ import w0nderful from '../assets/img/w0nderful.webp'
 import zywoo from '../assets/img/zywoo.webp'
 import twistzz from '../assets/img/Twistzz.webp'
 import kyousuke from '../assets/img/kyousuke.webp'
+import frozen from '../assets/img/forzen.webp'
 
 // Map Images
 import dust2 from '../assets/img/dust2.jpeg'
@@ -21,7 +22,7 @@ import ancient from '../assets/img/ancient.jpeg'
 import anubis from '../assets/img/Anubis.jpeg'
 import train from '../assets/img/train.png'
 
-export const playerList = ['donk','EliGE','iM','jL','kyousuke','m0NESY','niko','ropz','s1mple','Twistzz','w0nderful','ZywOo'];
+export const playerList = ['donk','EliGE','frozen','iM','jL','kyousuke','m0NESY','niko','ropz','s1mple','Twistzz','w0nderful','ZywOo'];
 
 export function GetPlayerImg(Player:string){
    switch(Player){
@@ -51,6 +52,8 @@ export function GetPlayerImg(Player:string){
          return zywoo;
       case "Twistzz":
          return twistzz;
+      case "frozen":
+         return frozen;
       default:
          return "";
    }
@@ -95,6 +98,9 @@ export function RenderName(name:string){
    }
    else if(name.includes("CEMEN_BAKIN")){
       return "kyousuke";
+   }
+   else if(name.includes("frozen")){
+      return "frozen";
    }
    else{
       return name;
