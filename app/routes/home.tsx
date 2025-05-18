@@ -7,10 +7,6 @@ import Header from "../components/Header";
 import MatchArea from "../components/MatchArea";
 import "../css/home.css"
 
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollSmoother } from "gsap/ScrollSmoother";
-
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Elite Player Tracker" },
@@ -24,10 +20,7 @@ export default function Home() {
   const {i18n} = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
-  const wrapperRef = useRef(null);
-  const contentRef = useRef(null);
 
-  gsap.registerPlugin(ScrollTrigger,ScrollSmoother);
    // Dark Mode Function
   const ChanegeMode=()=>{
     setChecked(!checked);
@@ -77,25 +70,11 @@ export default function Home() {
       i18n.changeLanguage('zh');
       setStatus(false);
     }
-    // Scroll Function
-    const smoother = ScrollSmoother.create({
-      wrapper: wrapperRef.current,
-      content: contentRef.current,
-      smooth: 1,
-      smoothTouch:1,
-      speed:3.5,
-      effects: true,
-      ignoreMobileResize:true,
-      normalizeScroll: true
-    });
-    return () => {
-      smoother.kill(); // 清理防止内存泄漏
-    };
-  },[location, navigate])
+  },[])
 
   return(
-    <div className={`${checked? 'dark' : 'light'} Home`} ref={wrapperRef}>
-        <div className="Body" ref={contentRef}>
+    <div className={`${checked? 'dark' : 'light'} Home`}>
+        <div className="Body">
           <Header ChanegeMode={ChanegeMode} isChecked={checked} status={status} Changelg={Changelg} />
           <MatchArea/>
         </div>
