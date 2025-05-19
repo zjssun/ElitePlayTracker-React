@@ -5,6 +5,8 @@ import { useTranslation } from "react-i18next";
 
 import Header from "../components/Header";
 import MatchArea from "../components/MatchArea";
+import Notice from "../components/Notice";
+
 import "../css/home.css"
 
 export function meta({}: Route.MetaArgs) {
@@ -20,6 +22,7 @@ export default function Home() {
   const {i18n} = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
+  const [showNotice, setShowNotice] = useState(false);
 
    // Dark Mode Function
   const ChanegeMode=()=>{
@@ -39,7 +42,18 @@ export default function Home() {
     }
   }
 
+  //Notice button function
+  const handleNoticeClose = () => {
+    localStorage.setItem('noticed', 'true');
+    setShowNotice(false);
+  };
+
+
   useEffect(()=>{
+      const noticed = localStorage.getItem('noticed') || false;
+      if (!noticed) {
+        setShowNotice(true);
+      }
 
     //Google Analytics
     const script1 = document.createElement("script");
@@ -91,6 +105,7 @@ export default function Home() {
   return(
     <div className={`${checked? 'dark' : 'light'} Home`}>
         <div className="Body">
+          {/* {showNotice && <Notice handleNoticeClose={handleNoticeClose} />} */}
           <Header ChanegeMode={ChanegeMode} isChecked={checked} status={status} Changelg={Changelg} />
           <MatchArea/>
         </div>
