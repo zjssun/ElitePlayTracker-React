@@ -24,7 +24,8 @@
 *Abandoned TailwindCSS 🫡 and switched to plain CSS — maintaining it was honestly a headache 🔨. Also updated to React Router v7 and started using its new framework-style routing — gotta say, the improvements are solid 🤓. Currently in the middle of a refactor...* 
 - **2025-05-18**：基本上重构完了🤗，更新了职业哥的图片🩻，加上了几张新地图，用上了gasp的ScrollSmoother。
 *Pretty much done with the refactor 🤗 — updated the pro player images 🩻, added a few new maps, and implemented GSAP's ScrollSmoother.*
-
+- **2025-05-19**：添加了Google Analytics 📈统计网站浏览量,📍添加公告功能方便往后域名更改做通知。
+*Added Google Analytics 📈 to track site traffic, and 📍introduced an announcement feature to easily notify users about future domain changes.*
 ---
 
 ## 部署到本地 | Deploy to Local
