@@ -1,7 +1,8 @@
 import type { Route } from "./+types/home";
-import { useState,useEffect,useRef } from "react";
+import { useState,useEffect } from "react";
 import {useLocation,useNavigate} from "react-router"
 import { useTranslation } from "react-i18next";
+import { playerList } from "../utils/ToolBox";
 
 import Header from "../components/Header";
 import MatchArea from "../components/MatchArea";
@@ -71,7 +72,7 @@ export default function Home() {
     document.head.appendChild(script2);
 
     // Check Route is /
-    if (location.pathname === '/') {
+    if (location.pathname === '/' || !playerList.includes(location.pathname)) {
       navigate('/donk');
     }
     // Check if Dark Mode is enabled in Local Storage

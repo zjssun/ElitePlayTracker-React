@@ -1,7 +1,7 @@
 .static{
    text-align: center;        
    font-size: var(--base-size);          
-   color: rgb(var(--text));
+   color: var(--text);
    font-family: sans-serif;
    margin-top: 4px;
    font-weight:bold;
