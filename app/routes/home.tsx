@@ -71,6 +71,13 @@ export default function Home() {
     `;
     document.head.appendChild(script2);
 
+    // Google AdSense
+    const adsScript = document.createElement("script");
+    adsScript.async = true;
+    adsScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8665891263297101";
+    adsScript.crossOrigin = "anonymous";
+    document.head.appendChild(adsScript);
+
     // Check Route is /
     if (location.pathname === '/' || !playerList.includes(location.pathname)) {
       navigate('/donk');

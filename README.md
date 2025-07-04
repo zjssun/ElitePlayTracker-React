@@ -19,13 +19,16 @@
 
 ## 更新历史 | Update History 📜
 
-**2025 年 5 月**  
-- **2025-05-17**：放弃Tailwindcss🫡转为纯css因为它维护起来是真的令人头疼🔨,同时也更新了React-RouteV7,V7的framework路由更新的路由确实很不错🤓,重构中......
+**2025 年**  
+- **05-17**：放弃Tailwindcss🫡转为纯css因为它维护起来是真的令人头疼🔨,同时也更新了React-RouteV7,V7的framework路由更新的路由确实很不错🤓,重构中......
 *Abandoned TailwindCSS 🫡 and switched to plain CSS — maintaining it was honestly a headache 🔨. Also updated to React Router v7 and started using its new framework-style routing — gotta say, the improvements are solid 🤓. Currently in the middle of a refactor...* 
-- **2025-05-18**：基本上重构完了🤗，更新了职业哥的图片🩻，加上了几张新地图，用上了gasp的ScrollSmoother。
+- **05-18**：基本上重构完了🤗，更新了职业哥的图片🩻，加上了几张新地图，用上了gasp的ScrollSmoother。
 *Pretty much done with the refactor 🤗 — updated the pro player images 🩻, added a few new maps, and implemented GSAP's ScrollSmoother.*
-- **2025-05-19**：添加了Google Analytics 📈统计网站浏览量,📍添加公告功能方便往后域名更改做通知。
+- **05-19**：添加了Google Analytics 📈统计网站浏览量,📍添加公告功能方便往后域名更改做通知。
 *Added Google Analytics 📈 to track site traffic, and 📍introduced an announcement feature to easily notify users about future domain changes.*
+
+- **07-05**：添加Google AdSense代码。
+*Added Google AdSense Code.*
 ---
 
 ## 部署到本地 | Deploy to Local
