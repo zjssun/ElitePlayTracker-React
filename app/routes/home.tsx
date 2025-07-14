@@ -51,6 +51,7 @@ export default function Home() {
 
 
   useEffect(()=>{
+      // Get Notice from Local Storage
       const noticed = localStorage.getItem('noticed') || false;
       if (!noticed) {
         setShowNotice(true);
@@ -112,7 +113,7 @@ export default function Home() {
   return(
     <div className={`${checked? 'dark' : 'light'} Home`}>
         <div className="Body">
-          {/* {showNotice && <Notice handleNoticeClose={handleNoticeClose} />} */}
+          {showNotice && <Notice handleNoticeClose={handleNoticeClose} />}
           <Header ChanegeMode={ChanegeMode} isChecked={checked} status={status} Changelg={Changelg} />
           <MatchArea/>
         </div>

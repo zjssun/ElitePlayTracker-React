@@ -27,7 +27,6 @@ export default function Prouduct({loaderData}:Route.ComponentProps){
    const responseData = loaderData;
    const timeList = GetTimeList(responseData) as string[];
    const timeListFromMatch = GetTimeListFromMatch(responseData);
-   console.log(timeListFromMatch);
    
    return(
       <>
