@@ -72,11 +72,18 @@ export default function Home() {
     `;
     document.head.appendChild(script2);
 
-    // Google AdSense
+    // Google AdSense <meta>
     const meta = document.createElement("meta");
     meta.name = "google-adsense-account";
     meta.content = "ca-pub-8665891263297101";
     document.head.appendChild(meta);
+
+    // Google AdSense <script> 
+    const adScript = document.createElement("script");
+    adScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8665891263297101";
+    adScript.async = true;
+    adScript.crossOrigin = "anonymous";
+    document.head.appendChild(adScript);
 
     // Check Route is /
     if (location.pathname === '/' || !playerList.includes(location.pathname)) {
