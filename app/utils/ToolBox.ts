@@ -22,6 +22,7 @@ import vertigo from '../assets/img/Vertigo.jpeg'
 import ancient from '../assets/img/ancient.jpeg'
 import anubis from '../assets/img/Anubis.jpeg'
 import train from '../assets/img/train.png'
+import overpass from '../assets/img/overpass.jpeg'
 
 export const playerList = ['donk','EliGE','frozen','iM','jL','kyousuke','m0NESY','niko','ropz','s1mple','Twistzz','w0nderful','ZywOo',"BOROS"];
 
@@ -84,6 +85,8 @@ export function GetMapImg(map:string){
          return anubis;
       case "de_train":
          return train;
+      case "de_overpass":
+         return overpass;
       default:
          return "";
    }

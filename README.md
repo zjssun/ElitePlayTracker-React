@@ -29,6 +29,9 @@
 
 - **07-05**：添加Google AdSense代码。
 *Added Google AdSense Code.*
+
+- **07-21**:添加overpass地图,添加选手BOROS。
+*Add the overpass map and the player BOROS.*
 ---
 
 ## 部署到本地 | Deploy to Local
